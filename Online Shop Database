@@ -1,0 +1,15 @@
+--Create an online shop database 
+CREATE TABLE pride_store (id integer primary key, item TEXT, price INTEGER, quantity INTEGER);
+INSERT INTO pride_store VALUES (1, "t-shirts", 20, 50);
+INSERT INTO pride_store VALUES (2, "pride flags", 15, 55);
+INSERT INTO pride_store VALUES (3, "hats", 18, 25);
+INSERT INTO pride_store VALUES (4,"lanyards", 10, 40);
+INSERT INTO pride_store VALUES (5, "pins", 6, 100);
+
+--display the database ordered by price
+SELECT * FROM pride_store
+ORDER BY price DESC;
+
+--what is the price of the cheapest item?
+SELECT MIN(price) 
+FROM pride_store;
